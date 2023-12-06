@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
     before_action :set_issue 
 
     def create 
-        @issue.comments.create! params.required(:commment).permit(:content)
+        @issue.comments.create! params.required(:comment).permit(:content)
         redirect_to @issue
     end
 
