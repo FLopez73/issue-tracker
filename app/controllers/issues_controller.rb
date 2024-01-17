@@ -1,7 +1,7 @@
 class IssuesController < ApplicationController
   before_action :set_issue, only: %i[ show edit update destroy ]
 
-  # GET /issues or /issues.json
+  # GET /issues or 
   def index
     @issues = Issue.all
   end
