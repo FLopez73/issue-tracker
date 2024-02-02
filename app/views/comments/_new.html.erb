@@ -1,5 +1,7 @@
 <%= form_with model: [ issue, Comment.new ] do |form| %>
-    comment:<br>
+    <h4> Comment:<br></h4> 
     <%= form.text_area :content, size: "20x5" %>
-    <%= form.submit %>
+    <div>
+    <%= form.submit %> 
+    </div>
 <% end %>
