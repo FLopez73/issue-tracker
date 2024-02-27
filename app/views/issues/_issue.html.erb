@@ -5,10 +5,6 @@
   </p>
 
   <p>
-    Created <%= time_tag issue.created_at, "data-local": "time-ago" %>
-  </p>
-
-  <p>
     <strong>Description:</strong>
     <%= issue.description %>
   </p>
@@ -28,4 +24,10 @@
     <%= issue.status %>
   </p>
 
+  <p>
+  <strong>Created:</strong> <%= time_tag issue.created_at, "data-local": "time-ago" %>
+  </p>
+
 </div>
+
+
