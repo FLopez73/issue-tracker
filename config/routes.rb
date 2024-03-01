@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "issues#index"
+
+  patch 'issues/:id', to: 'issues#update', as: 'update_issue'
 end

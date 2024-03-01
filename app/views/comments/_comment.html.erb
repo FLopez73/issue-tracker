@@ -1,4 +1,8 @@
-<div id="<%= dom_id(comment) %>">
+<div id="<%= dom_id(comment) %>" class="bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-4">
+  <div class="text-gray-900 dark:text-white">
     <%= comment.content %>
+  </div>
+  <div class="text-gray-600 dark:text-gray-400 text-sm mt-2">
     - <%= time_tag comment.created_at, "data-local": "time-ago" %>
+  </div>
 </div>
