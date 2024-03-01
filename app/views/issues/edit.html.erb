@@ -1,10 +1,15 @@
 <h1>Editing issue</h1>
 
-<%= render "form", issue: @issue %>
+<form>
+  <%= form_with model: @issue, method: :patch do |form| %>
+  <%= render "form", issue: @issue %>
+ 
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Show this issue", @issue %> |
-  <%= link_to "Back to issues", issues_path %>
-</div>
+  <div>
+    <%= form.submit "Submit" %> |
+    <%= link_to "Back to issues", issues_path %>
+  </div>
+ <% end %>
+ </form>
