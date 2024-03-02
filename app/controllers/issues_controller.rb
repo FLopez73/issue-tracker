@@ -53,13 +53,14 @@ class IssuesController < ApplicationController
 
   # DELETE /issues/1 or /issues/1.json
   def destroy
+    @issue.comments.destroy_all
     @issue.destroy
-
     respond_to do |format|
       format.html { redirect_to issues_url, notice: "Issue was successfully destroyed." }
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
